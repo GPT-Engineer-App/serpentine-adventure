@@ -9,9 +9,20 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
-import { CircleUser, Menu, Package2 } from "lucide-react";
+import { CircleUser, Menu, Package2, Home, Gamepad } from "lucide-react";
 import { NavLink, Outlet } from "react-router-dom";
-import { navItems } from "../App";
+const navItems = [
+  {
+    title: "Home",
+    to: "/",
+    icon: <Home className="h-4 w-4" />,
+  },
+  {
+    title: "Snake Game",
+    to: "/snake-game",
+    icon: <Gamepad className="h-4 w-4" />,
+  },
+];
 
 const Layout = () => {
   return (
